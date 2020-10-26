@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PMs-2x-5wT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TipVC-->
+        <scene sceneID="ni0-Ac-Ccq">
+            <objects>
+                <viewController id="PMs-2x-5wT" customClass="TipVC" customModule="tipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYY-YZ-nzR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CSL-4j-gBw">
+                                <rect key="frame" x="0.0" y="134" width="414" height="628"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="meal total" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="89c-9i-zct">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.96470588235294119" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.21568627450980393" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="51"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="mealTotalInput:" destination="W5H-gQ-kcr" eventType="editingDidEnd" id="dxd-AW-4e4"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="tip percentage" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2CE-RB-Fj2">
+                                        <rect key="frame" x="0.0" y="128.5" width="414" height="113.5"/>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.96470588235294119" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.21568627450980393" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="51"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-gb-LjT">
+                                        <rect key="frame" x="0.0" y="257" width="414" height="114"/>
+                                        <color key="backgroundColor" red="0.21568627450980393" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="51"/>
+                                        <state key="normal" title="calculate tip">
+                                            <color key="titleColor" red="0.95294117647058818" green="0.70196078431372544" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="36"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="calculateButtonClicked:" destination="PMs-2x-5wT" eventType="touchUpInside" id="I2s-CK-MEU"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="tip amount" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="M7h-4A-usH">
+                                        <rect key="frame" x="0.0" y="386" width="414" height="113.5"/>
+                                        <color key="backgroundColor" red="0.89411764705882346" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.21568627450980393" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="51"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="total bill" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="5LH-ut-CuQ">
+                                        <rect key="frame" x="0.0" y="514.5" width="414" height="113.5"/>
+                                        <color key="backgroundColor" red="0.89411764705882346" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.21568627450980393" green="0.46666666666666667" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="51"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fZu-0v-YCM"/>
+                        <color key="backgroundColor" red="0.32156862745098036" green="0.19607843137254902" blue="0.28627450980392155" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CSL-4j-gBw" firstAttribute="centerX" secondItem="EYY-YZ-nzR" secondAttribute="centerX" id="PEK-4t-FX5"/>
+                            <constraint firstItem="CSL-4j-gBw" firstAttribute="leading" secondItem="fZu-0v-YCM" secondAttribute="leading" id="isq-hP-DYT"/>
+                            <constraint firstItem="CSL-4j-gBw" firstAttribute="centerY" secondItem="EYY-YZ-nzR" secondAttribute="centerY" id="uS4-Dr-Cdo"/>
+                            <constraint firstItem="CSL-4j-gBw" firstAttribute="top" secondItem="fZu-0v-YCM" secondAttribute="top" constant="90" id="ukN-Dj-PC8"/>
+                            <constraint firstItem="fZu-0v-YCM" firstAttribute="trailing" secondItem="CSL-4j-gBw" secondAttribute="trailing" id="xjp-Y6-c7K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mealTotalInput" destination="89c-9i-zct" id="T46-5c-d1L"/>
+                        <outlet property="tipAmountOutput" destination="M7h-4A-usH" id="yMI-09-dq0"/>
+                        <outlet property="tipPercentInput" destination="2CE-RB-Fj2" id="0Kc-xu-bZ2"/>
+                        <outlet property="totalBillOutput" destination="5LH-ut-CuQ" id="hW2-pn-8pg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0LN-cF-dhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="W5H-gQ-kcr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="94"/>
+        </scene>
+    </scenes>
+</document>
